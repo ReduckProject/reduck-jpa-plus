@@ -9,6 +9,7 @@
         <!--        <version>2.5.14</version>-->
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
+    <groupId>net.reduck</groupId>
     <artifactId>reduck-jpa-plus</artifactId>
     <name>reduck-jpa-plus</name>
     <description>Demo project for Spring Boot</description>
