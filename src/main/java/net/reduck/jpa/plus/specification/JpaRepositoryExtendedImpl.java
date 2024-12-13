@@ -1,9 +1,12 @@
 package net.reduck.jpa.plus.specification;
 
+import jakarta.persistence.EntityManager;
+import jakarta.persistence.NoResultException;
+import jakarta.persistence.Tuple;
+import jakarta.persistence.TypedQuery;
+import jakarta.persistence.criteria.*;
 import lombok.SneakyThrows;
 import net.reduck.jpa.plus.entity.BaseEntityInterface;
-import net.reduck.jpa.plus.specification.transformer.TupleToBeanResultTransformer;
-import org.hibernate.query.internal.NativeQueryImpl;
 import org.springframework.beans.BeansException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.ApplicationContext;
@@ -18,8 +21,6 @@ import org.springframework.lang.Nullable;
 import org.springframework.transaction.annotation.Transactional;
 import org.springframework.util.Assert;
 
-import jakarta.persistence.*;
-import jakarta.persistence.criteria.*;
 import javax.sql.DataSource;
 import java.util.*;
 import java.util.function.Function;
@@ -219,15 +220,17 @@ public class JpaRepositoryExtendedImpl<T extends BaseEntityInterface, ID> extend
 
     @Override
     public List executeNativeSql(String sql, Class returnType) {
-        Query query = em.createNativeQuery(sql);
+//        Query query = em.createNativeQuery(sql);
+//
+//        if (!(query instanceof NativeQueryImpl)) {
+//            throw new UnsupportedOperationException();
+//        }
+//
+//        return ((NativeQueryImpl) query)
+//                .setResultTransformer(new TupleToBeanResultTransformer<>(returnType))
+//                .getResultList();
 
-        if (!(query instanceof NativeQueryImpl)) {
-            throw new UnsupportedOperationException();
-        }
-
-        return ((NativeQueryImpl) query)
-                .setResultTransformer(new TupleToBeanResultTransformer<>(returnType))
-                .getResultList();
+        throw new UnsupportedOperationException();
     }
 
     @Override
