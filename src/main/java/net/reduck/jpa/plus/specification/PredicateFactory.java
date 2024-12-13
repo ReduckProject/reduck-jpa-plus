@@ -6,7 +6,7 @@ import net.reduck.jpa.plus.specification.enums.CompareOperator;
 import org.springframework.data.jpa.repository.query.EscapeCharacter;
 import org.springframework.util.StringUtils;
 
-import javax.persistence.criteria.*;
+import jakarta.persistence.criteria.*;
 import java.util.*;
 
 /**

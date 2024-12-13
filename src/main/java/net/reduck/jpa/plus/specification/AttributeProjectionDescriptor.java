@@ -2,10 +2,10 @@ package net.reduck.jpa.plus.specification;
 
 
 
+import jakarta.persistence.criteria.JoinType;
 import net.reduck.jpa.plus.specification.enums.CombineOperator;
 import net.reduck.jpa.plus.specification.enums.CompareOperator;
 
-import javax.persistence.criteria.JoinType;
 import java.util.HashSet;
 import java.util.Set;
 

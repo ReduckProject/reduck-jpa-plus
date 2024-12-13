@@ -8,10 +8,10 @@ import net.reduck.jpa.plus.specification.transformer.TupleToBeanResultTransforme
 import org.hibernate.transform.ResultTransformer;
 import org.junit.jupiter.api.Test;
 
-import javax.persistence.Column;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
-import javax.persistence.Version;
+import jakarta.persistence.Column;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.Id;
+import jakarta.persistence.Version;
 import java.math.BigInteger;
 
 /**

@@ -5,7 +5,7 @@ import net.reduck.jpa.plus.specification.enums.CombineOperator;
 import net.reduck.jpa.plus.specification.enums.CompareOperator;
 import net.reduck.jpa.plus.specification.enums.MatchType;
 
-import javax.persistence.criteria.JoinType;
+import jakarta.persistence.criteria.JoinType;
 import java.lang.annotation.*;
 
 /**

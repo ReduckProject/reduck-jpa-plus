@@ -3,10 +3,10 @@ package net.reduck.jpa.plus.entity;
 import net.reduck.jpa.plus.specification.EntityUpdatedAction;
 import org.springframework.stereotype.Component;
 
-import javax.persistence.PostPersist;
-import javax.persistence.PostUpdate;
-import javax.persistence.PrePersist;
-import javax.persistence.PreUpdate;
+import jakarta.persistence.PostPersist;
+import jakarta.persistence.PostUpdate;
+import jakarta.persistence.PrePersist;
+import jakarta.persistence.PreUpdate;
 import java.util.ArrayList;
 import java.util.List;
 

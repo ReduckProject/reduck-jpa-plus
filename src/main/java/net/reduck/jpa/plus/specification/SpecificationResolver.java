@@ -13,7 +13,7 @@ import org.springframework.data.jpa.repository.query.EscapeCharacter;
 import org.springframework.lang.Nullable;
 import org.springframework.util.StringUtils;
 
-import javax.persistence.criteria.*;
+import jakarta.persistence.criteria.*;
 import java.lang.reflect.Method;
 import java.util.*;
 
@@ -90,7 +90,7 @@ class SpecificationResolver<T> implements Specification<T> {
         }
 
         if (AnnotationUtils.findAnnotation(targetClass, Subquery.class) != null) {
-            javax.persistence.criteria.Subquery subquery = query.subquery(root.getJavaType());
+            jakarta.persistence.criteria.Subquery subquery = query.subquery(root.getJavaType());
             Root<T> subRoot = subquery.from(root.getJavaType());
             subquery.select(subRoot.get(id));
             subquery.where(handle(subRoot, criteriaBuilder)).alias("subquery");

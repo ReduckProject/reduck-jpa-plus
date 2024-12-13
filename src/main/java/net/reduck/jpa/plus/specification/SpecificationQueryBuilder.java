@@ -4,7 +4,7 @@ import net.reduck.jpa.plus.specification.enums.CombineOperator;
 import net.reduck.jpa.plus.specification.enums.CompareOperator;
 import org.springframework.data.jpa.domain.Specification;
 
-import javax.persistence.criteria.JoinType;
+import jakarta.persistence.criteria.JoinType;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.LinkedList;

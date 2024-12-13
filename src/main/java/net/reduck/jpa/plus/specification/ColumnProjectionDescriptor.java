@@ -6,10 +6,10 @@ import lombok.experimental.Accessors;
 import net.reduck.jpa.plus.entity.transformer.ColumnTransformer;
 import org.springframework.util.StringUtils;
 
-import javax.persistence.criteria.Join;
-import javax.persistence.criteria.JoinType;
-import javax.persistence.criteria.Path;
-import javax.persistence.criteria.Root;
+import jakarta.persistence.criteria.Join;
+import jakarta.persistence.criteria.JoinType;
+import jakarta.persistence.criteria.Path;
+import jakarta.persistence.criteria.Root;
 import java.beans.PropertyDescriptor;
 import java.util.Map;
 

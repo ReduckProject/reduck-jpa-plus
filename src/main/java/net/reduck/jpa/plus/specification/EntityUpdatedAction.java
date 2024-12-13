@@ -5,10 +5,10 @@ import net.reduck.jpa.plus.entity.BaseEntityListener;
 
 /**
  * @author Reduck
- * @see javax.persistence.PreUpdate
- * @see javax.persistence.PrePersist
- * @see javax.persistence.PostPersist
- * @see javax.persistence.PostUpdate
+ * @see jakarta.persistence.PreUpdate
+ * @see jakarta.persistence.PrePersist
+ * @see jakarta.persistence.PostPersist
+ * @see jakarta.persistence.PostUpdate
  * @see BaseEntityListener#registerPostPersistAction(EntityUpdatedAction)
  * @see BaseEntityListener#registerPostUpdateAction(EntityUpdatedAction)
  * @see BaseEntityListener#registerPostPersistAction(EntityUpdatedAction)

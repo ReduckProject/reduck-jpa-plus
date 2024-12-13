@@ -2,7 +2,7 @@ package net.reduck.jpa.plus.specification.annotation;
 
 import net.reduck.jpa.plus.entity.transformer.ColumnTransformer;
 
-import javax.persistence.criteria.JoinType;
+import jakarta.persistence.criteria.JoinType;
 import java.lang.annotation.*;
 
 /**
