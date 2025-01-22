@@ -25,7 +25,6 @@ public @interface AttributeProjection {
      * @return
      */
     String[] property() default {};
-
     /**
      * 关联表
      * 支持多级关联查询

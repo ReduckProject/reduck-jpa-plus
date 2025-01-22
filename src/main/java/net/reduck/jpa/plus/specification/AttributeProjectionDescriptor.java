@@ -26,6 +26,12 @@ public class AttributeProjectionDescriptor {
         this.value = value;
         this.operatorType = operatorType;
     }
+    
+    public AttributeProjectionDescriptor(String name, Object value) {
+        this.name = name;
+        this.value = value;
+        this.operatorType = CompareOperator.EQUALS;
+    }
 
     /**
      * 实体对应的列名

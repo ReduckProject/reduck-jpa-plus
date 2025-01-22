@@ -19,7 +19,7 @@ public @interface ColumnProjection {
 
     String[] join() default {};
 
-    JoinType JoinType() default JoinType.LEFT;
+    JoinType joinType() default JoinType.LEFT;
 
     Class<? extends ColumnTransformer> transformer() default ColumnTransformer.class;
 }
