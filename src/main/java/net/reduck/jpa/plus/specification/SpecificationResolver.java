@@ -155,7 +155,7 @@ class SpecificationResolver<T> implements Specification<T> {
         switch (condition.operatorType) {
             // 小于等于
             case LESS_THAN_OR_EQUAL:
-                predicate = criteriaBuilder.lessThanOrEqualTo(root.get(condition.columnName), (Comparable) condition.value);
+                predicate = criteriaBuilder.lessThanOrEqualTo(getPath(condition, root), (Comparable) condition.value);
                 break;
             
             // 包含
@@ -197,11 +197,19 @@ class SpecificationResolver<T> implements Specification<T> {
                 break;
             
             case STARTS_WITH:
-                predicate = criteriaBuilder.like(getPath(condition, root), escapeCharacter.escape(String.valueOf(condition.value)) + "%", escapeCharacter.getEscapeCharacter());
+                if (condition.ignoreCase) {
+                    predicate = criteriaBuilder.like(criteriaBuilder.lower(getPath(condition, root)), escapeCharacter.escape(((String) condition.value).toLowerCase()) + "%", escapeCharacter.getEscapeCharacter());
+                } else {
+                    predicate = criteriaBuilder.like(getPath(condition, root), escapeCharacter.escape(String.valueOf(condition.value)) + "%", escapeCharacter.getEscapeCharacter());
+                }
                 break;
-            
+
             case ENDS_WITH:
-                predicate = criteriaBuilder.like(getPath(condition, root), "%" + escapeCharacter.escape(String.valueOf(condition.value)), escapeCharacter.getEscapeCharacter());
+                if (condition.ignoreCase) {
+                    predicate = criteriaBuilder.like(criteriaBuilder.lower(getPath(condition, root)), "%" + escapeCharacter.escape(((String) condition.value).toLowerCase()), escapeCharacter.getEscapeCharacter());
+                } else {
+                    predicate = criteriaBuilder.like(getPath(condition, root), "%" + escapeCharacter.escape(String.valueOf(condition.value)), escapeCharacter.getEscapeCharacter());
+                }
                 break;
             
             case NULL:
